@@ -162,8 +162,10 @@ typedef struct  _VAPictureParameterBufferHEVC
             uint32_t        IdrPicFlag                                  : 1;
             /** current picture has only intra slices */
             uint32_t        IntraPicFlag                                : 1;
+            /** CRC valuses are requested if set to 1 */
+            uint32_t        RequestCRC                                  : 1;
 
-            uint32_t        ReservedBits                                : 18;
+            uint32_t        ReservedBits                                : 17;
         } bits;
         uint32_t            value;
     } slice_parsing_fields;
